@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock-Paper-Scissors</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- HEADING -->
+    <div id="heading">
+      <div class="content">
+        <h2>Rock</h2>
+        <h2>Paper</h2>
+        <h2>Scissors</h2>
+      </div>
+      <div class="score-tag">
+        <div class="computer-score">
+          <p>COMPUTER <br />SCORE</p>
+          <h1 id="c-score">0</h1>
+        </div>
+        <div class="player-score">
+          <p>YOUR <br />SCORE</p>
+          <h1 id="p-score">0</h1>
+        </div>
+      </div>
+    </div>
+    <!-- THE GAME -->
+    <div class="choices">
+      <img
+        id="rock"
+        src="images/rock.svg"
+        alt="rock"
+        onclick="playGame('rock')"
+      />
+      <img
+        id="scissors"
+        src="images/scissors.svg"
+        alt="scissors"
+        onclick="playGame('scissors')"
+      />
+      <img
+        id="paper"
+        src="images/paper.svg"
+        alt="paper"
+        onclick="playGame('paper')"
+      />
+    </div>
+
+    <!-- RESULT -->
+    <div class="resultcontainer"></div>
+
+    <!-- RULES -->
+    <button id="rulesButton">Rules</button>
+    <div id="rulesModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Game Rules</h2>
+        <li>
+          <ul>
+            Rock beats scissors, scissors beat paper, and paper beats rock.
+          </ul>
+          <ul>
+            Agree ahead of time whether you'll count off "rock, paper, scissors,
+            shoot" or just "rock, paper, scissors."
+          </ul>
+          <ul>
+            Use rock, paper, scissors to settle minor decisions or simply play
+            to pass the time.
+          </ul>
+          <ul>
+            If both players lay down the same hand, each player lays down
+            another hand.
+          </ul>
+        </li>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
